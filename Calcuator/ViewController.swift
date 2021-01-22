@@ -44,7 +44,9 @@ class ViewController: UIViewController {
         change(sender: sender)
         if let newValue = sender.currentTitle{
             if isFinishedNumber {
-                if newValue == "."{  showLabel.text = showLabel.text! + newValue }else{ showLabel.text = newValue}
+                if newValue == "."{  showLabel.text = showLabel.text! + newValue }else{ showLabel.text = newValue} //為了使按完c後原本數字是０按.要變0. 而不是.0
+                
+                
                 isFinishedNumber = false
             }else{
                 if newValue == "."{
